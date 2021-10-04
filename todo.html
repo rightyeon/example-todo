@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do</title>
+    <!-- Font Css -->
+    <link href="custom.css"  rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- UI Component -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.2/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <section class="container mx-auto">
+        <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto w-full">
+                <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                    <p class="text-gray-300 text-base font-bold">Today what to do</p>
+                    <p class="text-gray-800 font-bold noto text-3xl leading-10">오늘의 할 일은? 🤔</p>
+                    <div class="flex my-5">
+                        <input type="text" id="todoValue" placeholder="다이소에서 후라이팬 사기" class="w-full pr-16 input input-lg mr-3 input-default"> 
+                        <button class="rounded-l-none btn btn-lg btn-primary" id="addBtn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <ul id="toDoBody" ></ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- To do JS -->
+    <script src="main.js"></script>
+</body>
+
+
+</html>

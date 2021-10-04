@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+.noto { font-family: 'Noto Sans KR', sans-serif; }
+.input.input-default { background: transparent; border: 1px solid #e5e7eb;color: #333; }
+.border-bottom { border-bottom:1px solid #e5e7eb;}
+.fadeIn { animation:fadeIn .5s ease forwards;}
+@keyframes fadeIn {
+    0%  { opacity:0; }
+    100% { opacity:1; }
+} 
+i { cursor: pointer; }
+label > input[type=checkbox]:checked ~ span { text-decoration: line-through; color:#a1a1aa}
+ul .list {
+    border-bottom:1px solid #e5e7eb;
+    padding:1.25rem 0;
+    animation:fadeIn .5s ease forwards;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    --tw-text-opacity: 1;
+    color: rgba(55,65,81,var(--tw-text-opacity));
+}
