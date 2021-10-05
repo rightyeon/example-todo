@@ -5,7 +5,20 @@ const todoBox    = document.querySelector('#toDoBody');
 const _TODOLIST  = 'toDoList';
 const isToDos    = localStorage.getItem(_TODOLIST);
 
+let dummyHolder = [
+                    { text: '애플 스토어에서 갤럭시폰 체험하기 🍎'},
+                    { text: '다이소에서 후라이팬 사기 🍳' },
+                    { text: '올리브영에서 디퓨저 사기 🌷'},
+                    { text: '저녁 장 보기 👩‍🍳'},
+                    { text: '카페에서 커피 원두 사기 ☕️'},
+                    { text: '고양이 장난감 사기 🙀' },
+                    { text: '오징어게임 정주행 하기 📺' },
+                    { text: '개발일지 쓰기 👩‍💻' },
+]
 let todoArr      = [];
+
+resetPlaceholder();
+
 
 // localStorage에 todo 가 있는지 확인
 if (isToDos !== null) {
@@ -21,14 +34,22 @@ function enterHandler(e) {
     }
 }
 
+function resetPlaceholder() {
+    let randomNum    = Math.floor(Math.random()*dummyHolder.length);
+    todoText.placeholder = dummyHolder[randomNum].text;
+}
+
 // 할일 추가 시
 function toDoHandler(e) {
     e.preventDefault();
     // 빈 텍스트라면 placeholder 대로 추가해주자
     const todoValue = todoText.value; 
     if (todoValue.trim().length < 1) {
+        drawToDo(todoText.placeholder);
+        saveToDo(todoText.placeholder);
         todoText.value='';
         todoText.focus();
+        resetPlaceholder();
     } 
     else {
         drawToDo(todoValue);
