@@ -14,6 +14,7 @@ let dummyHolder = [
                     { text: '고양이 장난감 사기 🙀' },
                     { text: '오징어게임 정주행 하기 📺' },
                     { text: '개발일지 쓰기 👩‍💻' },
+                    { text: '운동하기💪' },
 ]
 let todoArr      = [];
 
@@ -115,6 +116,25 @@ function doneToDo(e) {
             ele.done = (isCheck)?true:false;
         }
     });
+
+    let result = todoArr.sort(function (a, b) {
+        let x = a.done;
+        let y = b.done;
+
+        if (x < y) {
+            return -1;
+        }
+        if (x > y) {
+            return 1;
+        }
+        return 0;
+    });
+
+    console.log(result);
+
+    
+
+
     saveToDo();
 }
 
