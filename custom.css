@@ -8,7 +8,7 @@
     0%  { opacity:0; }
     100% { opacity:1; }
 } 
-i { cursor: pointer; }
+i { cursor: pointer; } 
 label > input[type=checkbox]:checked ~ span { text-decoration: line-through; color:#a1a1aa}
 ul .list {
     border-bottom:1px solid #e5e7eb;
