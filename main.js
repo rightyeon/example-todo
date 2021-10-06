@@ -5,6 +5,8 @@ const todoBox    = document.querySelector('#toDoBody');
 const _TODOLIST  = 'toDoList';
 const isToDos    = localStorage.getItem(_TODOLIST);
 
+// 완료목록, 할일 구분하기
+
 let dummyHolder = [
                     { text: '애플 스토어에서 갤럭시폰 체험하기 🍎'},
                     { text: '다이소에서 후라이팬 사기 🍳' },
